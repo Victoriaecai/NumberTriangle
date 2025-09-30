@@ -95,10 +95,12 @@ public class NumberTriangle {
             return this.root;
         }
         else {
+            //temporary triangle
             NumberTriangle temp = new NumberTriangle(this.root);
             temp.left = this.left;
             temp.right = this.right;
             for (int i = 0; i < path.length(); i++){
+                //follow path based on letter
                 if (path.charAt(i) == 'l'){
                     temp = temp.left;
                 }
